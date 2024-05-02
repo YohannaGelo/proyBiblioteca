@@ -1,0 +1,295 @@
+@font-face {
+    /* para inserta una fuente descargada */
+    font-family: 'cormorant';
+    /* Nombre de la fuente */
+    src: url('font/CormorantUpright-Regular.ttf') format('truetype');
+    /* Ruta de la fuente */
+}
+
+@font-face {
+    /* para inserta una fuente descargada */
+    font-family: 'greatVibes';
+    /* Nombre de la fuente */
+    src: url('font/GreatVibes-Regular.ttf') format('truetype');
+    /* Ruta de la fuente */
+}
+
+@font-face {
+    /* para inserta una fuente descargada */
+    font-family: 'cinzel';
+    /* Nombre de la fuente */
+    src: url('font/CinzelDecorative-Regular.ttf') format('truetype');
+    /* Ruta de la fuente */
+}
+
+@font-face {
+    /* para inserta una fuente descargada */
+    font-family: 'cardo';
+    /* Nombre de la fuente */
+    src: url('font/Cardo-Regular.ttf') format('truetype');
+    /* Ruta de la fuente */
+}
+
+body {
+    background-image: url("img/fondo2.webp");
+    background-size: cover;
+    font-size: 18px;
+    font-family: 'cormorant', sans-serif;
+    color: #313131;
+    text-align: justify;
+    overflow-x: hidden;
+    background-attachment: fixed;
+}
+
+
+h1 {
+    margin-left: 1em;
+    margin-top: 0.6em;
+    font-variant: small-caps;
+    font-size: 75px;
+    text-shadow: 2px 2px 4px rgba(197, 197, 197, 0.5);
+    color: rgb(246, 191, 191);
+    font-family: 'cinzel', sans-serif;
+}
+
+h5 {
+    color: rgba(250, 221, 221, 0.897);
+    text-align: center;
+    font-family: 'cinzel', sans-serif;
+    cursor: not-allowed;
+}
+
+/* ESTILO MENÚ */
+.menu-contenedor {
+    overflow: hidden;
+}
+
+.menu {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    text-transform: uppercase;
+    width: 100%;
+    text-align: center;
+    font-size: 26px;
+    font-weight: bolder;
+    text-shadow: 1px 1px 2px rgba(225, 224, 224, 0.452);
+}
+
+.menu li {
+    flex-grow: 1;
+    border-top: 1px solid #313131;
+    border-left: 1px solid  #313131;
+    border-right: 1px solid  #313131;
+    border-radius: 8px 8px 0 0;
+}
+
+.menu a {
+    display: block;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #313131;
+    border-radius: 8px 8px 0 0;
+    
+}
+
+.menu a:hover {
+    color: azure;
+    border-radius: 8px 8px 0 0;
+    font-size: 27px;
+}
+
+.tab {
+    background-color:#dcc97c8f;
+    border-top: 1px solid #313131;
+    border-left: 1px solid  #313131;
+    border-right: 1px solid  #313131;
+    border-bottom: 1px solid  #313131;
+    border-radius: 8px 8px 0 0;
+    cursor: pointer;
+}
+
+/* clases para dar estilo a las funciones de js */
+/* Da un estilo distinto a la pestaña activa */
+.tab.active {
+    background-color:#dcc97cc7;
+    border-bottom: none;
+}
+
+/* Oculta todo el contenido de los div no activos */
+.content {
+    display: none; 
+}
+
+/* Muestra el contenido del div activo */
+.content.active {
+    display: block; 
+}
+
+/* ESTILO FONDO SIMULANDO CARPETA */
+.fondoCarpeta {
+    width: 99.9%;
+    height: auto;
+    background-color:#dcc97cc7;
+    padding: 2em 0 2em 0;
+    border-bottom: 1px solid #313131;
+    border-left: 1px solid  #313131;
+    border-right: 1px solid  #313131;
+}
+
+h2 {
+    color: olivedrab;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.452);
+    font-variant: small-caps;
+    font-size: 34px;
+}
+
+details {
+    width: 50%;
+    margin-left: 2%;
+    /* Esto centrará el desplegable en la página */
+    margin-top: 20px;
+    /* Margen superior para separarlo del borde superior */
+}
+
+
+
+summary {
+    background-color: #3f3015dd;
+    color: white;
+    padding: 10px;
+    padding-left: 1.3em;
+    cursor: pointer;
+    border-radius: 5px;
+    list-style-image: url('img/libro.png');
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    
+}
+
+summary:hover {
+    background-color: rgba(246, 191, 191, 0.66);
+}
+
+#prestamo {
+    list-style-image: url('img/prestar.png');
+}
+
+#usuarioImg {
+    list-style-image: url('img/usuario.png');
+}
+
+.dropdown-content {
+    display: none;
+    background-color: #f8f7f0ec;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+
+}
+
+details[open] .dropdown-content {
+    display: block;
+}
+
+form {
+    margin-top: 10px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"] {
+    width: 97%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+button[type="submit"] {
+    background-color: #3f3015dd;
+    color:aliceblue;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    font-size: 20px;
+    margin-right: 3em;
+    font-family: 'cinzel', sans-serif;
+    font-variant: small-caps;
+    font-weight: bold;
+}
+
+.botonesExtras {
+    margin-left: 4em;
+    
+}
+
+button[type="submit"]:hover, .botonesExtras.hover {
+    background-color: rgba(246, 191, 191, 0.66);
+    color: #313131;
+}
+
+font {
+    color: darkred;
+    font-weight: bolder;
+}
+
+.fuenteSumario {
+    margin-left: 2.5em;
+    /* con estas 3 lineas he conseguido centrar el texto en la caja de sumario */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: -1.8em;
+    color: aliceblue;
+    font-size: 28px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    font-family: 'cinzel', sans-serif;
+    font-variant: small-caps;
+}
+
+.fuenteSumario:hover {
+    color: #313131;
+}
+
+.listaLibros {
+    margin-left: 5em;
+    margin-top: 3em;
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.listaLibros li {
+    /* así puedo poner una imagen como estilo de lista y modificarla */
+    background-image: url('img/listaLibro.png');
+    background-repeat: no-repeat;
+    background-position: 0 3px;
+    padding-left: 2.3em;
+    filter: drop-shadow(1px 1px 2px rgba(0, 0, 0, 0.5)); /* sombra a la imagen del libro */
+}
+
+.listaUsuarios {
+    margin-left: 5em;
+    margin-top: 3em;
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.listaUsuarios li {
+    /* así puedo poner una imagen como estilo de lista y modificarla */
+    background-image: url('img/usuario.png');
+    background-repeat: no-repeat;
+    background-position: 0 0px;
+    padding-left: 4em;
+    filter: drop-shadow(1px 1px 2px rgba(0, 0, 0, 0.5)); /* sombra a la imagen del libro */
+}
+
+
+
+

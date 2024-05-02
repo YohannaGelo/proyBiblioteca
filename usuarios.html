@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+   <title>Gestión de usuarios</title>
+   <link rel="stylesheet" type="text/css" href="biblioteca.css">
+   <link rel="icon" href="img/favicon.png" type="image/x-icon">
+</head>
+
+<body>
+   <!-- Título principal de la página. -->
+   <h1>Gestión de Biblioteca</h1>
+
+   <div class="menu-conetenedor">
+    <ul class="menu">
+       <li id="tabInicio"><a href="biblioteca.html">Inicio</a></li>
+       <li id="tabCatalogo"><a href="catalogo.html">Catalogo</a></li>
+       <li id="tabUsuarios"><a href="usuarios.html">Usuarios</a></li>
+       <li id="tabPrestamos"><a href="prestamos.html">Prestamos</a></li>
+    </ul>
+ </div>
+
+   <div class="fondoCarpeta">
+
+          <!-- aquí los usuarios y sus libros prestados -->
+          <ul id="todosUsuarios" class="listaUsuarios"></ul>
+
+          <!-- botones para mostrar las listas -->
+          <div class="botonesExtras">
+            <button type="submit" id="listarUsuarios">Listar Usuarios</button>
+         </div>
+
+   </div>
+    
+    //<script src="biblioteca.js"></script> <!-- Para vincular un documento con código javascript -->
+
+</body>
+
+</html>

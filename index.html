@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+   <title>Gestión de biblioteca</title>
+   <link rel="stylesheet" type="text/css" href="biblioteca.css">
+   <link rel="icon" href="img/favicon.png" type="image/x-icon">
+</head>
+
+<body>
+   <!-- Título principal de la página -->
+   <h1>Gestión de Biblioteca</h1>
+
+   <!-- Menú de navegación -->
+   <div class="menu-contenedor">
+      <ul class="menu">
+         <!-- uso un data-target para ayudar en el js a mostrar o esconder el contenido según la selección del usuario -->
+         <li class="tab active"><a href="#" data-target="divInicio" class="active">Inicio</a></li>
+         <li class="tab"><a href="#" data-target="divCatalogo">Catalogo</a></li>
+         <li class="tab"><a href="#" data-target="divUsuarios">Usuarios</a></li>
+         <li class="tab"><a href="#" data-target="divPrestamos">Prestamos</a></li>
+      </ul>
+   </div>
+
+
+
+   <!-- Div principal, envuelve el contenido activo dando sensación de estar en una carpeta -->
+   <div class="fondoCarpeta">
+
+      <!-- Contenido de la sección Inicio -->
+      <div class="content active" id="divInicio">
+         <h1>INICIO</h1>
+         <div id="verBlog"></div>
+      </div>
+
+
+      <!-- Contenido de la sección Catalogo -->
+      <div class="content hidden" id="divCatalogo">
+         <h1>CATALOGO</h1>
+         <!--  Menú desplegable para nuevo libro -->
+         <details>
+            <summary>
+               <font class="fuenteSumario">Registrar un nuevo libro</font>
+            </summary>
+            <!-- Sección para agregar un nuevo libro-->
+            <div class="dropdown-content">
+               <!-- Campos de texto para ingresar el título y autor-->
+               <input type="text" id="titulo" placeholder="Título del libro">
+               <input type="text" id="autor" placeholder="Autor del libro">
+
+               <button type="submit" id="agregarLibro">Agregar Libro</button>
+            </div>
+         </details>
+
+         <br><br>
+         <!-- botones para mostrar las listas -->
+         <div class="botonesExtras">
+            <button type="submit" id="listarLibro">Ver Libros Disponibles</button>
+         </div>
+
+         <!-- aquí se mostraran los libros disponibles -->
+         <ul id="librosDisponibles" class="listaLibros"></ul>
+      </div>
+
+
+      <!-- Contenido de la sección Usuarios -->
+      <div class="content hidden" id="divUsuarios">
+         <h1>USUARIOS</h1>
+         <!--  Menú desplegable para nuevo libro -->
+         <details>
+            <summary id="usuarioImg">
+               <font class="fuenteSumario">Registrar usuario</font>
+            </summary>
+            <!-- Sección para agregar un nuevo libro-->
+            <div class="dropdown-content">
+               <!-- Campos de texto para ingresar el título y autor-->
+               <input type="text" id="nombre" placeholder="Nombre del usuario">
+               <input type="text" id="apellido" placeholder="Apellido del usuario">
+
+               <button type="submit" id="agregarUsuario">Agregar Usuario</button>
+            </div>
+         </details>
+
+         <br><br>
+         <!-- botones para mostrar las listas -->
+         <div class="botonesExtras">
+            <button type="submit" id="listarUsuarios">Listar Usuarios</button>
+         </div>
+
+         <!-- aquí se mostraran los usuarios registrados -->
+         <ul id="todosUsuarios" class="listaUsuarios"></ul>
+      </div>
+
+
+      <!-- Contenido de la sección Préstamos -->
+      <div class="content hidden" id="divPrestamos">
+         <h1>PRESTAMOS</h1>
+         <!--  Menú desplegable para nuevo libro -->
+         <details>
+            <summary id="prestamo">
+               <font class="fuenteSumario">Préstamos a usuarios</font>
+            </summary>
+            <!-- Sección para prestar un libro-->
+            <div class="dropdown-content">
+               <!-- Campos de texto para ingresar el título y nombre usuario -->
+               <!-- <input type="text" id="tituloPrestar" placeholder="Título del libro">
+               <input type="text" id="nombreUsuario" placeholder="Nombre del usuario">
+               <input type="text" id="apellidoUsuario" placeholder="Apellido del usuario"> -->
+
+               <!-- Campos de texto para ingresar el título del libro -->
+               <input type="text" id="tituloPrestar" placeholder="Título del libro">
+
+               <!-- Campo de búsqueda para filtrar la lista de usuarios -->
+               <input type="text" id="buscarUsuario" placeholder="Buscar usuario por nombre"
+                  oninput="filtrarUsuarios()">
+
+               <!-- Lista desplegable de usuarios -->
+               <select id="listaUsuarios">
+                  <!-- Las opciones serán llenadas dinámicamente mediante JavaScript -->
+               </select>
+
+               <br><br>
+               <button type="submit" id="prestarLibro">Prestar Libro</button>
+            </div>
+         </details>
+      </div>
+
+   </div>
+
+   <h5 onclick="limpiarLocalStorage()">Reestablecer localStorage (Borrado de datos)</h5>
+
+   <!-- Enlace al archivo que contiene el código de javascript -->
+   <script src="biblioteca.js"></script> <!-- Para vincular un documento con código javascript -->
+
+</body>
+
+</html>
